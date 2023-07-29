@@ -1,0 +1,248 @@
+body {
+    background-color: white;
+    font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+header > img {
+    max-height: 70%;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    justify-content: end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.main-content {
+    display: subgrid;
+    grid-gap: 20px;
+}
+
+.main-picture {
+    width: 100%;
+    height: 15rem;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.content h1 {
+    font-size: 35px;
+    margin-top: 1rem;
+}
+
+.read-button {
+    background-color: #00001b;
+    padding: 12px 18px 12px 18px;
+    border: none;
+    margin-top: 30px;
+    width: 50%;
+}
+
+.read-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.new-content {
+    display: subgrid;
+    background-color: #00001b;
+    color: white;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.new-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.new-content a :hover {
+    color: #f5b609;
+}
+
+article > h2 {
+    color: #f5b609;
+    font-weight: bold;
+}
+
+hr {
+    width: 90%;
+}
+
+.topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+}
+
+.topic-cards {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.topic-cards img {
+    height: 120px;
+}
+
+.content-img {
+    line-height: 0.5;
+    margin-left: 0px;
+}
+
+.content-img > h2 {
+    color: hsl(233, 8%, 79%);
+}
+
+.content-img > h4 :hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+.content-img > p {
+    line-height: 20px;
+    color: hsl(233, 8%, 79%);
+}
+
+@media (max-width: 600px) {
+    /* Adjust the layout for smaller screens */
+    header {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+  /* Hide the navigation links */
+  nav ul {
+    display: none;
+  }
+
+  nav ul.show {
+    display: grid;
+  }
+  
+  /* Show the hamburger menu icon */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Style the hamburger menu icon */
+  .menu-toggle__icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu-toggle__icon::before,
+  .menu-toggle__icon::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+  }
+  
+  .menu-toggle__icon::before {
+    top: -8px;
+  }
+  
+  .menu-toggle__icon::after {
+    top: 8px;
+  }
+  
+  /* Show the hamburger menu icon */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Style the hamburger menu icon */
+  .menu-toggle__icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu-toggle__icon::before,
+  .menu-toggle__icon::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+  }
+  
+  .menu-toggle__icon::before {
+    top: -8px;
+  }
+  
+  .menu-toggle__icon::after {
+    top: 8px;
+  }
+}
+    
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .topic-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .topic-cards > * {
+        grid-row: auto;
+    }
+    
+    .topic-cards img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    
+    .content {
+      grid-template-columns: 1fr;
+    }
+    
+    .read-button {
+      width: 100%;
+    }
+  }
